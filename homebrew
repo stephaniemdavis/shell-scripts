@@ -1,0 +1,10 @@
+# This file was written to automate the routine task of updating my Homebrew package manager.
+# Bash Script file
+# Started October 27, 2016 by Stephanie M. Davis
+
+#! /bin/bash
+brew doctor
+brew update
+brew upgrade
+brew prune
+echo 'The Homebrew Maintenance script has completed its operations!'
