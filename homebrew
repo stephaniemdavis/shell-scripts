@@ -7,4 +7,5 @@ brew doctor
 brew update
 brew upgrade
 brew prune
+brew cleanup
 echo 'The Homebrew Maintenance script has completed its operations!'
