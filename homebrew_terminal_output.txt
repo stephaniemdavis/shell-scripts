@@ -1,0 +1,626 @@
+Last login: Mon Nov  7 11:11:29 on console
+Stephanies-MacBook-Pro:~ smdavis$ homebrew
+Please note that these warnings are just used to help the Homebrew maintainers
+with debugging if you file an issue. If everything you use Homebrew for is
+working fine: please don't worry and just ignore them. Thanks!
+
+Warning: Anaconda is known to frequently break Homebrew builds, including Vim and
+MacVim, due to bundling many duplicates of system and Homebrew-available
+tools.
+
+If you encounter a build failure please temporarily remove Anaconda
+from your $PATH and attempt the build again prior to reporting the
+failure to us. Thanks!
+
+Warning: python is symlinked to python3
+This will confuse build scripts and in general lead to subtle breakage.
+
+Warning: "config" scripts exist outside your system or Homebrew directories.
+`./configure` scripts often look for *-config scripts to determine if
+software packages are installed, and what additional flags to use when
+compiling and linking.
+
+Having additional scripts in your path can confuse software installed via
+Homebrew if the config script overrides a system or Homebrew provided
+script of the same name. We found the following "config" scripts:
+  /Users/stephaniemdavis/web_dev/anaconda3/bin/curl-config
+  /Users/stephaniemdavis/web_dev/anaconda3/bin/freetype-config
+  /Users/stephaniemdavis/web_dev/anaconda3/bin/icu-config
+  /Users/stephaniemdavis/web_dev/anaconda3/bin/libdynd-config
+  /Users/stephaniemdavis/web_dev/anaconda3/bin/libpng-config
+  /Users/stephaniemdavis/web_dev/anaconda3/bin/libpng16-config
+  /Users/stephaniemdavis/web_dev/anaconda3/bin/python3-config
+  /Users/stephaniemdavis/web_dev/anaconda3/bin/python3.5-config
+  /Users/stephaniemdavis/web_dev/anaconda3/bin/python3.5m-config
+  /Users/stephaniemdavis/web_dev/anaconda3/bin/xml2-config
+  /Users/stephaniemdavis/web_dev/anaconda3/bin/xslt-config
+Updated 2 taps (caskroom/cask, homebrew/core).
+==> New Formulae
+coffeescript                             terraform-provisioner-ansible
+metricbeat                               wdc
+mikutter
+==> Updated Formulae
+acpica                                   libgit2
+ansible                                  libtiff ✔
+apache-zeppelin                          mdds
+app-engine-go-32                         mdp
+app-engine-go-64                         media-info
+artifactory                              mediaconch
+asio                                     mercurial
+aws-sdk-cpp                              mmix
+awscli ✔                                 mu
+azure-cli                                mycli
+babl                                     mysql-sandbox
+bibtexconv                               neofetch
+buku                                     notmuch
+clib                                     ocamlbuild
+cmake                                    omega
+cpprestsdk                               openvpn
+cryptopp                                 pcap_dnsproxy
+curl                                     percona-toolkit
+dbhash                                   pmd
+dependency-check                         postgresql
+distribution                             prometheus
+docker-machine-driver-xhyve              ripgrep
+duplicity                                roswell
+eris                                     s6
+fdroidserver                             scons
+fluent-bit                               sdl2
+freeipmi                                 sf-pwgen
+freetds                                  sops
+fstar                                    sqldiff
+gegl                                     sqlite ✔
+git-annex                                sqlite-analyzer
+glm                                      sslscan
+globus-toolkit                           subnetcalc
+godep                                    suricata
+google-benchmark                         swift
+gspell                                   swiftgen
+gtkextra                                 swiftlint
+gtksourceview3                           swig
+hebcal                                   syncthing-inotify
+imagemagick                              tbox
+ipbt                                     terraform
+ironcli                                  texmath
+jasper                                   tinc
+jboss-forge                              translate-shell
+jemalloc                                 typescript
+jenkins                                  urweb
+jenkins-job-builder                      vdirsyncer
+jetty                                    vim
+jfrog-cli-go                             webkitgtk
+kibana                                   wellington
+knot                                     wireguard-tools
+languagetool                             xapian
+lean-cli                                 xcproj
+libdap                                   youtube-dl
+libetonyek
+==> Deleted Formulae
+swish-e             tevent              tlassemble          wyrd
+==> Upgrading 3 outdated packages, with result:
+awscli 1.11.13, libtiff 4.0.6_3, sqlite 3.15.1
+==> Upgrading awscli
+==> Downloading https://homebrew.bintray.com/bottles/awscli-1.11.13.sierra.bottl
+######################################################################## 100.0%
+==> Pouring awscli-1.11.13.sierra.bottle.tar.gz
+==> Caveats
+The "examples" directory has been installed to:
+  /usr/local/share/awscli/examples
+
+Before using aws-cli, you need to tell it about your AWS credentials.
+The quickest way to do this is to run:
+  aws configure
+
+More information:
+  https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-started.html
+  https://pypi.python.org/pypi/awscli#getting-started
+
+Bash completion has been installed to:
+  /usr/local/etc/bash_completion.d
+
+zsh completion has been installed to:
+  /usr/local/share/zsh/site-functions
+==> Summary
+🍺  /usr/local/Cellar/awscli/1.11.13: 3,467 files, 28.6M
+==> Upgrading libtiff
+==> Downloading https://homebrew.bintray.com/bottles/libtiff-4.0.6_3.sierra.bott
+######################################################################## 100.0%
+==> Pouring libtiff-4.0.6_3.sierra.bottle.tar.gz
+🍺  /usr/local/Cellar/libtiff/4.0.6_3: 262 files, 3.4M
+==> Upgrading sqlite
+==> Downloading https://homebrew.bintray.com/bottles/sqlite-3.15.1.sierra.bottle
+######################################################################## 100.0%
+==> Pouring sqlite-3.15.1.sierra.bottle.tar.gz
+==> Caveats
+This formula is keg-only, which means it was not symlinked into /usr/local.
+
+macOS provides an older sqlite3.
+
+Generally there are no consequences of this for you. If you build your
+own software and it requires this formula, you'll need to add to your
+build variables:
+
+    LDFLAGS:  -L/usr/local/opt/sqlite/lib
+    CPPFLAGS: -I/usr/local/opt/sqlite/include
+    PKG_CONFIG_PATH: /usr/local/opt/sqlite/lib/pkgconfig
+
+==> Summary
+🍺  /usr/local/Cellar/sqlite/3.15.1: 11 files, 2.9M
+Removing: /usr/local/Cellar/awscli/1.11.11... (3,458 files, 28.3M)
+Removing: /usr/local/Cellar/libtiff/4.0.6_2... (261 files, 3.4M)
+Removing: /usr/local/Cellar/sqlite/3.15.0... (11 files, 2.9M)
+Removing: /Users/stephaniemdavis/Library/Caches/Homebrew/awscli-1.11.11.sierra.bottle.tar.gz... (5.5M)
+==> This operation has freed approximately 40.2M of disk space.
+The Homebrew Maintenance script has completed its operations!
+Stephanies-MacBook-Pro:~ smdavis$ 
+Updated 2 taps (caskroom/cask, homebrew/core).
+==> Updated Formulae
+aha
+android-ndk
+arangodb
+aria2
+aws-sdk-cpp
+awscli
+cassandra
+czmq
+docker
+fontforge
+ghc
+gradle
+hyperscan
+libcec
+libressl
+libxml++3
+llnode
+logstash
+meson
+metricbeat
+mpop
+msmtp
+ruby-build
+svtplay-dl
+syncthing
+terraform
+vim
+x264
+yarn
+zeromq
+==> Upgrading 1 outdated package, with result:
+awscli 1.11.15
+==> Upgrading awscli
+==> Downloading https://homebrew.bintray.com/bottles/awscli-1.11.15.sierra.bottle.tar.gz
+==> Pouring awscli-1.11.15.sierra.bottle.tar.gz
+==> Caveats
+The "examples" directory has been installed to:
+  /usr/local/share/awscli/examples
+
+Before using aws-cli, you need to tell it about your AWS credentials.
+The quickest way to do this is to run:
+  aws configure
+
+More information:
+  https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-started.html
+  https://pypi.python.org/pypi/awscli#getting-started
+
+Bash completion has been installed to:
+  /usr/local/etc/bash_completion.d
+
+zsh completion has been installed to:
+  /usr/local/share/zsh/site-functions
+==> Summary
+🍺  /usr/local/Cellar/awscli/1.11.15: 3,469 files, 28.6M
+Removing: /usr/local/Cellar/awscli/1.11.14... (3,468 files, 28.6M)
+Removing: /Users/stephaniemdavis/Library/Caches/Homebrew/awscli-1.11.14.sierra.bottle.tar.gz... (5.5M)
+==> This operation has freed approximately 34.1M of disk space.
+The Homebrew Maintenance script has completed its operations!
+Updated 1 tap (caskroom/cask).
+No changes to formulae.
+Updated 1 tap (caskroom/cask).
+No changes to formulae.
+Updated 2 taps (caskroom/cask, homebrew/core).
+==> New Formulae
+eject
+goenv
+libgc
+recon-ng
+tarsnapper
+wu
+==> Updated Formulae
+aws-sdk-cpp
+awscli
+bro
+bzrtools
+cabal-install
+ceylon
+check_postgres
+citus
+cmark
+commandbox
+cpanminus
+diff-pdf
+elasticsearch
+elixirscript
+elm
+ephemeralpg
+freetds
+gecode
+git-lfs
+gmic
+gst-editing-services
+gst-libav
+gst-plugins-bad
+gst-plugins-base
+gst-plugins-good
+gst-plugins-ugly
+gst-python
+gst-validate
+gstreamer
+gtk+3
+jasper
+jenkins
+kibana
+kotlin
+libgpg-error
+libpqxx
+libuv
+libzdb
+log4cxx
+macvim
+megatools
+mesos
+minizinc
+modd
+nexus
+nomad
+openvdb
+osm2pgrouting
+osm2pgsql
+pdf2htmlex
+pdftoedn
+pex
+pg_top
+pgcli
+pgloader
+pgpool-ii
+pgroonga
+pgrouting
+pldebugger
+pngquant
+poppler
+postgis
+postgresql
+postgrest
+psql2csv
+psqlodbc
+qjackctl
+ruby
+scw
+speedtest_cli
+tbb
+tig
+tile38
+trafficserver
+vim
+wireshark
+yarn
+you-get
+youtube-dl
+zabbix
+==> Deleted Formulae
+pyqt
+qjson
+==> Upgrading 1 outdated package, with result:
+awscli 1.11.18
+==> Upgrading awscli
+==> Downloading https://homebrew.bintray.com/bottles/awscli-1.11.18.sierra.bottle.tar.gz
+==> Pouring awscli-1.11.18.sierra.bottle.tar.gz
+==> Caveats
+The "examples" directory has been installed to:
+  /usr/local/share/awscli/examples
+
+Before using aws-cli, you need to tell it about your AWS credentials.
+The quickest way to do this is to run:
+  aws configure
+
+More information:
+  https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-started.html
+  https://pypi.python.org/pypi/awscli#getting-started
+
+Bash completion has been installed to:
+  /usr/local/etc/bash_completion.d
+
+zsh completion has been installed to:
+  /usr/local/share/zsh/site-functions
+==> Summary
+🍺  /usr/local/Cellar/awscli/1.11.18: 3,469 files, 28.7M
+Removing: /usr/local/Cellar/awscli/1.11.16... (3,469 files, 28.6M)
+Removing: /Users/stephaniemdavis/Library/Caches/Homebrew/awscli-1.11.16.sierra.bottle.tar.gz... (5.5M)
+==> This operation has freed approximately 34.1M of disk space.
+The Homebrew Maintenance script has completed its operations!
+Updated 2 taps (caskroom/cask, homebrew/core).
+==> New Formulae
+elasticsearch@1.7
+github-keygen
+ib
+juju@2.0
+kops
+lumo
+nanomsgxx
+packetbeat
+qwtpolar
+swiftformat
+==> Updated Formulae
+advancecomp
+agda
+android-platform-tools
+antigen
+arangodb
+archi-steam-farm
+aws-sdk-cpp
+awscli
+caf
+ceylon
+cli53
+crystal-lang
+davmail
+efl
+eject
+ffmpeg
+flow
+fltk
+fwup
+galen
+ghc
+git-cola
+git-lfs
+git-series
+gitlab-ci-multi-runner
+goaccess
+gphoto2
+gradle
+gupnp-tools
+gwyddion
+hunspell
+imagemagick
+infer
+internetarchive
+jboss-forge
+jenkins
+jpeg-turbo
+lean-cli
+libarchive
+libgphoto2
+libphonenumber
+libtiff
+mackup
+mg3a
+modd
+mono
+mpv
+ninja
+node
+pgcli
+pgrouting
+pigz
+pyenv
+pypy3
+rbenv
+ripgrep
+ruby
+ruby-build
+snappystream
+snapraid
+syncthing
+tasksh
+terraform
+testssl
+tippecanoe
+typescript
+vala
+vim
+yarn
+youtube-dl
+zplug
+==> Renamed Formulae
+juju -> juju@1.25
+==> Deleted Formulae
+polygen
+==> Upgrading 3 outdated packages, with result:
+awscli 1.11.21, libtiff 4.0.7, pyenv 1.0.4
+==> Upgrading awscli
+==> Downloading https://homebrew.bintray.com/bottles/awscli-1.11.21.sierra.bottle.tar.gz
+==> Pouring awscli-1.11.21.sierra.bottle.tar.gz
+==> Caveats
+The "examples" directory has been installed to:
+  /usr/local/share/awscli/examples
+
+Before using aws-cli, you need to tell it about your AWS credentials.
+The quickest way to do this is to run:
+  aws configure
+
+More information:
+  https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-started.html
+  https://pypi.python.org/pypi/awscli#getting-started
+
+Bash completion has been installed to:
+  /usr/local/etc/bash_completion.d
+
+zsh completion has been installed to:
+  /usr/local/share/zsh/site-functions
+==> Summary
+🍺  /usr/local/Cellar/awscli/1.11.21: 3,507 files, 29M
+==> Upgrading libtiff
+==> Downloading https://homebrew.bintray.com/bottles/libtiff-4.0.7.sierra.bottle.tar.gz
+==> Pouring libtiff-4.0.7.sierra.bottle.tar.gz
+🍺  /usr/local/Cellar/libtiff/4.0.7: 248 files, 3.3M
+==> Upgrading pyenv
+==> Using the sandbox
+==> Downloading https://github.com/yyuu/pyenv/archive/v1.0.4.tar.gz
+==> Downloading from https://codeload.github.com/yyuu/pyenv/tar.gz/v1.0.4
+==> Caveats
+To use Homebrew's directories rather than ~/.pyenv add to your profile:
+  export PYENV_ROOT=/usr/local/var/pyenv
+
+To enable shims and autocompletion add to your profile:
+  if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
+==> Summary
+🍺  /usr/local/Cellar/pyenv/1.0.4: 541 files, 2.2M, built in 6 seconds
+Removing: /usr/local/Cellar/awscli/1.11.19... (3,867 files, 32.7M)
+Removing: /usr/local/Cellar/libtiff/4.0.6_3... (262 files, 3.4M)
+Removing: /usr/local/Cellar/pyenv/1.0.3... (530 files, 2.2M)
+Removing: /Users/stephaniemdavis/Library/Caches/Homebrew/awscli-1.11.19.sierra.bottle.tar.gz... (5.6M)
+Removing: /Users/stephaniemdavis/Library/Caches/Homebrew/libtiff-4.0.6_3.sierra.bottle.tar.gz... (1M)
+Removing: /Users/stephaniemdavis/Library/Caches/Homebrew/pyenv-1.0.3.tar.gz... (479.8K)
+Removing: /Users/stephaniemdavis/Library/Logs/Homebrew/glib... (68B)
+==> This operation has freed approximately 45.4M of disk space.
+The Homebrew Maintenance script has completed its operations!
+Updated 2 taps (caskroom/cask, homebrew/core).
+==> New Formulae
+elasticsearch@2.4
+mysql@5.5
+mysql@5.6
+qjson
+==> Updated Formulae
+ansifilter
+aws-sdk-cpp
+awscli
+bazel
+buku
+camlp4
+camlp5
+citus
+clipper
+cmake
+collectd
+conan
+coq
+coreutils
+dmd
+elasticsearch
+fabio
+filebeat
+flow
+fstar
+git
+gitlab-ci-multi-runner
+go
+gst-editing-services
+gst-plugins-bad
+gst-plugins-base
+gst-plugins-good
+gst-plugins-ugly
+gst-python
+gst-validate
+gstreamer
+hunspell
+javarepl
+jmeter
+kibana
+lablgtk
+lean-cli
+ledit
+llnode
+logstash
+macvim
+mdv
+mercurial
+mkvtoolnix
+mongodb
+mu
+nifi
+ocaml
+ocamlbuild
+ocamlsdl
+offlineimap
+pandoc
+pandoc-citeproc
+pgroonga
+rancher-compose
+readline
+sbcl
+skinny
+snap-telemetry
+sourcekitten
+ssreflect
+subversion
+swiftlint
+syncthing
+texmath
+twarc
+vim
+youtube-dl
+zero-install
+zstd
+==> Renamed Formulae
+libmongoclient -> mongo-cxx-driver
+mongo-c -> mongo-c-driver
+==> Deleted Formulae
+libbson
+libmongoc
+==> Upgrading 3 outdated packages, with result:
+awscli 1.11.23, git 2.11.0, readline 7.0.1
+==> Upgrading awscli
+==> Downloading https://homebrew.bintray.com/bottles/awscli-1.11.23.sierra.bottle.tar.gz
+==> Pouring awscli-1.11.23.sierra.bottle.tar.gz
+==> Caveats
+The "examples" directory has been installed to:
+  /usr/local/share/awscli/examples
+
+Before using aws-cli, you need to tell it about your AWS credentials.
+The quickest way to do this is to run:
+  aws configure
+
+More information:
+  https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-started.html
+  https://pypi.python.org/pypi/awscli#getting-started
+
+Bash completion has been installed to:
+  /usr/local/etc/bash_completion.d
+
+zsh completion has been installed to:
+  /usr/local/share/zsh/site-functions
+==> Summary
+🍺  /usr/local/Cellar/awscli/1.11.23: 3,510 files, 29.3M
+==> Upgrading git
+==> Downloading https://homebrew.bintray.com/bottles/git-2.11.0.sierra.bottle.tar.gz
+==> Pouring git-2.11.0.sierra.bottle.tar.gz
+==> Caveats
+Bash completion has been installed to:
+  /usr/local/etc/bash_completion.d
+
+zsh completion has been installed to:
+  /usr/local/share/zsh/site-functions
+
+Emacs Lisp files have been installed to:
+  /usr/local/share/emacs/site-lisp/git
+==> Summary
+🍺  /usr/local/Cellar/git/2.11.0: 1,452 files, 32.4M
+==> Upgrading readline
+==> Downloading https://homebrew.bintray.com/bottles/readline-7.0.1.sierra.bottle.tar.gz
+==> Pouring readline-7.0.1.sierra.bottle.tar.gz
+==> Caveats
+This formula is keg-only, which means it was not symlinked into /usr/local.
+
+macOS provides the BSD libedit library, which shadows libreadline.
+In order to prevent conflicts when programs look for libreadline we are
+defaulting this GNU Readline installation to keg-only.
+
+
+Generally there are no consequences of this for you. If you build your
+own software and it requires this formula, you'll need to add to your
+build variables:
+
+    LDFLAGS:  -L/usr/local/opt/readline/lib
+    CPPFLAGS: -I/usr/local/opt/readline/include
+
+==> Summary
+🍺  /usr/local/Cellar/readline/7.0.1: 46 files, 2M
+Removing: /usr/local/Cellar/awscli/1.11.21... (3,507 files, 29M)
+Removing: /usr/local/Cellar/git/2.10.2... (1,445 files, 31.9M)
+Removing: /usr/local/Cellar/readline/7.0... (45 files, 2M)
+Removing: /usr/local/Cellar/sqlite/3.15.1... (11 files, 2.9M)
+Removing: /Users/stephaniemdavis/Library/Caches/Homebrew/awscli-1.11.21.sierra.bottle.tar.gz... (5.6M)
+Removing: /Users/stephaniemdavis/Library/Caches/Homebrew/sqlite-3.15.1.sierra.bottle.tar.gz... (1.4M)
+Removing: /Users/stephaniemdavis/Library/Logs/Homebrew/tmux... (7 files, 769.7K)
+==> This operation has freed approximately 73.7M of disk space.
+The Homebrew Maintenance script has completed its operations!
